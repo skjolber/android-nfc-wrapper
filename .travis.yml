@@ -5,6 +5,10 @@ android:
     - build-tools-29.0.2
     - android-29
     - extra
+  licenses:
+    - 'android-sdk-preview-license-.*'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
     
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
@@ -14,5 +18,7 @@ cache:
     - $HOME/.gradle/caches/
     - $HOME/.gradle/wrapper/
     - $HOME/.android/build-cache
+    
+    
     
     
