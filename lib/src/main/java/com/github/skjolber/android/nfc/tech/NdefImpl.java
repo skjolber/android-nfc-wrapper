@@ -71,7 +71,7 @@ import java.io.IOException;
  * <p class="note"><strong>Note:</strong> Methods that perform I/O operations
  * require the {@link android.Manifest.permission#NFC} permission.
  */
-public final class TNdefImpl extends Ndef {
+public final class NdefImpl extends Ndef {
     private static final String TAG = "NFC";
 
     private final int mMaxNdefSize;
