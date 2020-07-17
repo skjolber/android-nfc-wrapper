@@ -6,7 +6,7 @@ Project wrapping black- and greylisted Android NFC classes.
 
 Features:
 
- - Clones a lot of NFC-related interfaces (aidls) and classes, like `Ndef` and `Tag`
+ - Clones a lot of NFC-related interfaces (aidls) and classes, like `Ndef`, `Tag` and `IsoDep`
  - Adds wrappers so that the cloned source works in parallel with the native sources
 
 Advantages:
