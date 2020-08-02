@@ -36,10 +36,9 @@ import java.io.IOException;
  * require the {@link android.Manifest.permission#NFC} permission.
  */
 public abstract class NfcV implements BasicTagTechnology {
-    /** @hide */
+
     public static final String EXTRA_RESP_FLAGS = "respflags";
 
-    /** @hide */
     public static final String EXTRA_DSFID = "dsfid";
 
     private byte mRespFlags;

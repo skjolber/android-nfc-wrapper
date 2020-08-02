@@ -17,9 +17,6 @@ package com.github.skjolber.android.nfc;
 
 import android.os.Bundle;
 
-/**
- * {@hide}
- */
 interface INfcDta {
 
     void enableDta();

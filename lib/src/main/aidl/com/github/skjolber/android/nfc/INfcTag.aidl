@@ -20,9 +20,6 @@ import android.nfc.NdefMessage;
 import com.github.skjolber.android.nfc.TagImpl;
 import com.github.skjolber.android.nfc.TransceiveResult;
 
-/**
- * @hide
- */
 interface INfcTag
 {
     int connect(int nativeHandle, int technology);

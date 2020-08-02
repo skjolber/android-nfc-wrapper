@@ -11,35 +11,35 @@ import com.github.skjolber.android.nfc.TagWrapper;
 import java.io.IOException;
 
 public abstract class Ndef implements BasicTagTechnology {
-    /** @hide */
+
     public static final int NDEF_MODE_READ_ONLY = 1;
-    /** @hide */
+
     public static final int NDEF_MODE_READ_WRITE = 2;
-    /** @hide */
+
     public static final int NDEF_MODE_UNKNOWN = 3;
-    /** @hide */
+
     public static final String EXTRA_NDEF_MSG = "ndefmsg";
-    /** @hide */
+
     public static final String EXTRA_NDEF_MAXLENGTH = "ndefmaxlength";
-    /** @hide */
+
     public static final String EXTRA_NDEF_CARDSTATE = "ndefcardstate";
-    /** @hide */
+
     public static final String EXTRA_NDEF_TYPE = "ndeftype";
-    /** @hide */
+
     public static final int TYPE_OTHER = -1;
-    /** @hide */
+
     public static final int TYPE_1 = 1;
-    /** @hide */
+
     public static final int TYPE_2 = 2;
-    /** @hide */
+
     public static final int TYPE_3 = 3;
-    /** @hide */
+
     public static final int TYPE_4 = 4;
-    /** @hide */
+
     public static final int TYPE_MIFARE_CLASSIC = 101;
-    /** @hide */
+
     public static final int TYPE_ICODE_SLI = 102;
-    /** @hide */
+
     public static final String UNKNOWN = "android.ndef.unknown";
     /** NFC Forum Tag Type 1 */
     public static final String NFC_FORUM_TYPE_1 = "org.nfcforum.ndef.type1";
@@ -53,7 +53,6 @@ public abstract class Ndef implements BasicTagTechnology {
     public static final String MIFARE_CLASSIC = "com.nxp.ndef.mifareclassic";
     /**
      * NDEF on iCODE SLI
-     * @hide
      */
     public static final String ICODE_SLI = "com.nxp.ndef.icodesli";
 

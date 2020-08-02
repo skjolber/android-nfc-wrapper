@@ -39,9 +39,8 @@ import java.io.IOException;
  */
 public abstract class NfcF implements BasicTagTechnology {
 
-    /** @hide */
     public static final String EXTRA_SC = "systemcode";
-    /** @hide */
+
     public static final String EXTRA_PMM = "pmm";
 
     /**

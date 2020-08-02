@@ -20,7 +20,22 @@ Disadvantages:
  * does not work out of the box with third party libraries - they must be modified / recompiled to work. This can be solved with a custom processor, but this is yet to be implemented.
   
 ## License
-[Apache 2.0].
+[Apache 2.0]
+
+## Obtain
+The project is built with [Gradle] and is available on the central Maven repository.  For Gradle, configure the property
+
+```groovy
+ext {
+  androidNfcWrapperVersion = '1.0.0'
+}
+```
+
+and add the dependency
+
+```groovy
+api("com.github.skjolber.android.nfc:wrapper:${androidNfcWrapperVersion}@aar")
+```
 
 # History
  - 1.0.0: Initial version extracted from the [external-nfc-api](https://github.com/skjolber/external-nfc-api) project.

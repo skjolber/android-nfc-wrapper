@@ -37,7 +37,6 @@ import java.io.IOException;
 public class NfcVImpl extends NfcV {
     public static final String EXTRA_RESP_FLAGS = "respflags";
 
-    /** @hide */
     public static final String EXTRA_DSFID = "dsfid";
 
     private byte mRespFlags;

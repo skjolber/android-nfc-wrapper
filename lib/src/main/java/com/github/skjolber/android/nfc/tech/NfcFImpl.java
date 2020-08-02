@@ -39,9 +39,8 @@ import java.io.IOException;
 public final class NfcFImpl extends NfcF {
     private static final String TAG = "NFC";
 
-    /** @hide */
     public static final String EXTRA_SC = "systemcode";
-    /** @hide */
+
     public static final String EXTRA_PMM = "pmm";
 
     private byte[] mSystemCode = null;

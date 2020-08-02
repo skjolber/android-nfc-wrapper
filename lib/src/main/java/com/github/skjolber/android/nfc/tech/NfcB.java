@@ -36,9 +36,9 @@ import java.io.IOException;
  * require the {@link android.Manifest.permission#NFC} permission.
  */
 public abstract class NfcB implements BasicTagTechnology {
-    /** @hide */
+
     public static final String EXTRA_APPDATA = "appdata";
-    /** @hide */
+
     public static final String EXTRA_PROTINFO = "protinfo";
 
 

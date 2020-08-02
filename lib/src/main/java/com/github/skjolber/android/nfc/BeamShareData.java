@@ -11,7 +11,6 @@ import android.os.UserHandle;
  * Allows bundling NdefMessage, Uris and flags in a single
  * IPC call. This is important as we want to reduce the
  * amount of IPC calls at "touch time".
- * @hide
  */
 public class BeamShareData implements Parcelable {
     public final NdefMessage ndefMessage;

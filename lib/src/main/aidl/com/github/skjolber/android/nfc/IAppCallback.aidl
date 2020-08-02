@@ -19,9 +19,6 @@ package com.github.skjolber.android.nfc;
 import com.github.skjolber.android.nfc.BeamShareData;
 import com.github.skjolber.android.nfc.TagImpl;
 
-/**
- * @hide
- */
 interface IAppCallback
 {
     BeamShareData createBeamShareData(byte peerLlcpVersion);

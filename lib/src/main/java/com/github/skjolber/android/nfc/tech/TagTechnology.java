@@ -85,49 +85,49 @@ public interface TagTechnology extends Closeable {
     /**
      * This technology is an instance of {@link NfcAImpl}.
      * <p>Support for this technology type is mandatory.
-     * @hide
+
      */
     public static final int NFC_A = 1;
 
     /**
      * This technology is an instance of {@link NfcB}.
      * <p>Support for this technology type is mandatory.
-     * @hide
+
      */
     public static final int NFC_B = 2;
 
     /**
      * This technology is an instance of {@link IsoDepImpl}.
      * <p>Support for this technology type is mandatory.
-     * @hide
+
      */
     public static final int ISO_DEP = 3;
 
     /**
      * This technology is an instance of {@link NfcF}.
      * <p>Support for this technology type is mandatory.
-     * @hide
+
      */
     public static final int NFC_F = 4;
 
     /**
      * This technology is an instance of {@link NfcV}.
      * <p>Support for this technology type is mandatory.
-     * @hide
+
      */
     public static final int NFC_V = 5;
 
     /**
      * This technology is an instance of {@link NdefImpl}.
      * <p>Support for this technology type is mandatory.
-     * @hide
+
      */
     public static final int NDEF = 6;
 
     /**
      * This technology is an instance of {@link NdefFormatable}.
      * <p>Support for this technology type is mandatory.
-     * @hide
+
      */
     public static final int NDEF_FORMATABLE = 7;
 
@@ -136,7 +136,7 @@ public interface TagTechnology extends Closeable {
      * <p>Support for this technology type is optional. If a stack doesn't support this technology
      * type tags using it must still be discovered and present the lower level radio interface
      * technologies in use.
-     * @hide
+
      */
     public static final int MIFARE_CLASSIC = 8;
 
@@ -145,7 +145,7 @@ public interface TagTechnology extends Closeable {
      * <p>Support for this technology type is optional. If a stack doesn't support this technology
      * type tags using it must still be discovered and present the lower level radio interface
      * technologies in use.
-     * @hide
+
      */
     public static final int MIFARE_ULTRALIGHT = 9;
 
@@ -154,7 +154,7 @@ public interface TagTechnology extends Closeable {
      * <p>Support for this technology type is optional. If a stack doesn't support this technology
      * type tags using it must still be discovered and present the lower level radio interface
      * technologies in use.
-     * @hide
+
      */
     public static final int NFC_BARCODE = 10;
 

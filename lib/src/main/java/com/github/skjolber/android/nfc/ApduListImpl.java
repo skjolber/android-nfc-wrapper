@@ -6,9 +6,6 @@ import android.os.Parcelable;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @hide
- */
 public class ApduListImpl implements ApduList {
 
     private ArrayList<byte[]> commands = new ArrayList<byte[]>();
