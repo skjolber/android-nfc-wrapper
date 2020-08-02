@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/skjolber/android-nfc-wrapper.svg)](https://travis-ci.org/skjolber/android-nfc-wrapper)
-[![Coverage Status](https://coveralls.io/repos/github/skjolber/android-nfc-wrapper/badge.svg?branch=master)](https://coveralls.io/github/skjolber/android-nfc-wrapper?branch=master)
 
 # android-nfc-wrapper
 Project cloning + wrapping black- and greylisted Android NFC (`android.nfc`) classes. 
@@ -23,7 +22,7 @@ Disadvantages:
 [Apache 2.0]
 
 ## Obtain
-The project is built with [Gradle] and is available on the central Maven repository.  For Gradle, configure the property
+The project is built with [Gradle] and is available on the central Maven repository. For Gradle, configure the property
 
 ```groovy
 ext {
@@ -42,5 +41,5 @@ api("com.github.skjolber.android.nfc:wrapper:${androidNfcWrapperVersion}@aar")
 
 [Apache 2.0]: 			http://www.apache.org/licenses/LICENSE-2.0.html
 [issue-tracker]:		https://github.com/skjolber/android-nfc-wrapper/issues
-[Maven]:			http://maven.apache.org/
+[Gradle]:			https://gradle.org/
 
