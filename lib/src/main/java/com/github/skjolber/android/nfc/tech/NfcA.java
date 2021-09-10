@@ -33,7 +33,11 @@ public abstract class NfcA implements BasicTagTechnology {
             }
         } else if(tag instanceof TagWrapper) {
             TagWrapper delegate = (TagWrapper)tag;
-            return new NfcAWrapper(android.nfc.tech.NfcA.get(delegate.getDelegate()));
+            android.nfc.tech.NfcA nfcA = android.nfc.tech.NfcA.get(delegate.getDelegate());
+            if(nfcA == null) {
+                return null;
+            }
+            return new NfcAWrapper(nfcA);
         } else {
             throw new IllegalArgumentException();
         }

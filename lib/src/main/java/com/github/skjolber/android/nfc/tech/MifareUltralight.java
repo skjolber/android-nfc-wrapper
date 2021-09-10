@@ -40,7 +40,11 @@ public abstract class MifareUltralight implements BasicTagTechnology {
             }
         } else if(tag instanceof TagWrapper) {
             TagWrapper delegate = (TagWrapper)tag;
-            return new MifareUltralightWrapper(android.nfc.tech.MifareUltralight.get(delegate.getDelegate()));
+            android.nfc.tech.MifareUltralight mifareUltralight = android.nfc.tech.MifareUltralight.get(delegate.getDelegate());
+            if(mifareUltralight == null) {
+                return null;
+            }
+            return new MifareUltralightWrapper(mifareUltralight);
         } else {
             throw new IllegalArgumentException();
         }

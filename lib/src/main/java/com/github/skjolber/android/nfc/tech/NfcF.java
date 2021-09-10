@@ -63,7 +63,11 @@ public abstract class NfcF implements BasicTagTechnology {
             }
         } else if(tag instanceof TagWrapper) {
             TagWrapper delegate = (TagWrapper)tag;
-            return new NfcFWrapper(android.nfc.tech.NfcF.get(delegate.getDelegate()));
+            android.nfc.tech.NfcF nfcF = android.nfc.tech.NfcF.get(delegate.getDelegate());
+            if(nfcF == null) {
+                return null;
+            }
+            return new NfcFWrapper(nfcF);
         } else {
             throw new IllegalArgumentException();
         }
