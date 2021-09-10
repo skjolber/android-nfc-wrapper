@@ -81,7 +81,11 @@ public abstract class Ndef implements BasicTagTechnology {
             }
         } else if(tag instanceof TagWrapper) {
             TagWrapper delegate = (TagWrapper)tag;
-            return new NdefWrapper(android.nfc.tech.Ndef.get(delegate.getDelegate()));
+            android.nfc.tech.Ndef ndef = android.nfc.tech.Ndef.get(delegate.getDelegate());
+            if(ndef == null) {
+                return null;
+            }
+            return new NdefWrapper(ndef);
         } else {
             throw new IllegalArgumentException();
         }

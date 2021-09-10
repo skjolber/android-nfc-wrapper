@@ -29,8 +29,13 @@ public abstract class IsoDep implements BasicTagTechnology {
                 return null;
             }
         } else if(tag instanceof TagWrapper) {
-            TagWrapper delegate = (TagWrapper)tag;
-            return new IsoDepWrapper(android.nfc.tech.IsoDep.get(delegate.getDelegate()));
+            TagWrapper tagWrapper = (TagWrapper)tag;
+			android.nfc.Tag delegate = tagWrapper.getDelegate();
+			android.nfc.tech.IsoDep isoDep = android.nfc.tech.IsoDep.get(delegate);
+			if(isoDep == null) {
+				return null;
+			}
+			return new IsoDepWrapper(isoDep);
         } else {
             throw new IllegalArgumentException();
         }

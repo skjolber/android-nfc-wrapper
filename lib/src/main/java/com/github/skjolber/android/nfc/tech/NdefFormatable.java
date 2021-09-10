@@ -68,7 +68,11 @@ public abstract class NdefFormatable implements BasicTagTechnology {
             }
         } else if(tag instanceof TagWrapper) {
             TagWrapper delegate = (TagWrapper)tag;
-            return new NdefFormattableWrapper(android.nfc.tech.NdefFormatable.get(delegate.getDelegate()));
+            android.nfc.tech.NdefFormatable ndefFormatable = android.nfc.tech.NdefFormatable.get(delegate.getDelegate());
+            if(ndefFormatable == null) {
+                return null;
+            }
+            return new NdefFormattableWrapper(ndefFormatable);
         } else {
             throw new IllegalArgumentException();
         }

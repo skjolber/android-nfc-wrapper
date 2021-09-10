@@ -64,7 +64,11 @@ public abstract class NfcV implements BasicTagTechnology {
             }
         } else if(tag instanceof TagWrapper) {
             TagWrapper delegate = (TagWrapper)tag;
-            return new NfcVWrapper(android.nfc.tech.NfcV.get(delegate.getDelegate()));
+            android.nfc.tech.NfcV nfcV = android.nfc.tech.NfcV.get(delegate.getDelegate());
+            if(nfcV == null) {
+                return null;
+            }
+            return new NfcVWrapper(nfcV);
         } else {
             throw new IllegalArgumentException();
         }

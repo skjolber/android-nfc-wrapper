@@ -58,7 +58,11 @@ public abstract class NfcBarcode implements BasicTagTechnology {
             }
         } else if(tag instanceof TagWrapper) {
             TagWrapper delegate = (TagWrapper)tag;
-            return new NfcBarcodeWrapper(android.nfc.tech.NfcBarcode.get(delegate.getDelegate()));
+            android.nfc.tech.NfcBarcode nfcBarcode = android.nfc.tech.NfcBarcode.get(delegate.getDelegate());
+            if(nfcBarcode == null) {
+                return null;
+            }
+            return new NfcBarcodeWrapper(nfcBarcode);
         } else {
             throw new IllegalArgumentException();
         }

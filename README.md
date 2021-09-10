@@ -26,7 +26,7 @@ The project is built with [Gradle] and is available on the central Maven reposit
 
 ```groovy
 ext {
-  androidNfcWrapperVersion = '1.0.0'
+  androidNfcWrapperVersion = '1.0.1'
 }
 ```
 
@@ -37,6 +37,7 @@ api("com.github.skjolber.android.nfc:wrapper:${androidNfcWrapperVersion}@aar")
 ```
 
 # History
+ - 1.0.1: Return null when tag technology is not in tech list.
  - 1.0.0: Initial version extracted from the [external-nfc-api](https://github.com/skjolber/external-nfc-api) project.
 
 [Apache 2.0]: 			http://www.apache.org/licenses/LICENSE-2.0.html

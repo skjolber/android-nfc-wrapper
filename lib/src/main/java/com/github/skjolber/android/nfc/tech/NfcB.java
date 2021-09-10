@@ -63,7 +63,11 @@ public abstract class NfcB implements BasicTagTechnology {
             }
         } else if(tag instanceof TagWrapper) {
             TagWrapper delegate = (TagWrapper)tag;
-            return new NfcBWrapper(android.nfc.tech.NfcB.get(delegate.getDelegate()));
+            android.nfc.tech.NfcB nfcB = android.nfc.tech.NfcB.get(delegate.getDelegate());
+            if(nfcB == null) {
+                return null;
+            }
+            return new NfcBWrapper(nfcB);
         } else {
             throw new IllegalArgumentException();
         }

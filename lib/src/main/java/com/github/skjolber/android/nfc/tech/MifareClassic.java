@@ -69,7 +69,11 @@ public abstract class MifareClassic implements BasicTagTechnology {
             }
         } else if(tag instanceof TagWrapper) {
             TagWrapper delegate = (TagWrapper)tag;
-            return new MifareClassicWrapper(android.nfc.tech.MifareClassic.get(delegate.getDelegate()));
+            android.nfc.tech.MifareClassic mifareClassic = android.nfc.tech.MifareClassic.get(delegate.getDelegate());
+            if(mifareClassic == null) {
+                return null;
+            }
+            return new MifareClassicWrapper(mifareClassic);
         } else {
             throw new IllegalArgumentException();
         }
