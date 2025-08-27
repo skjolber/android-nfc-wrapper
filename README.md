@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/skjolber/android-nfc-wrapper.svg)](https://travis-ci.org/skjolber/android-nfc-wrapper)
-
 # android-nfc-wrapper
 Project cloning + wrapping black- and greylisted Android NFC (`android.nfc`) classes. 
 
